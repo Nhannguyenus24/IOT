@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Control Screen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="control-panel">
+        <div class="control-block first-block">
+          <div class="header">
+            <h1 class="time" id="time">--:--:--</h1>
+            <p class="date" id="date">--/--/----</p>
+          </div>
+          <h2 class="weather-description" id="weatherDesc">Cloudy</h2>
+        </div>
+
+        <div class="control-block second-block">
+
+          <div class="temperature-humidity">
+            <div class="icon-and-info">
+              <div class="icon temperature-icon"></div>
+              <div>
+                <span class="room-info"><span id="temperature">26</span>°C</span>
+              </div>
+            </div>
+            <div class="icon-and-info">
+              <div class="icon humidity-icon"></div>
+              <div>
+                <span class="room-info"><span id="humidity">65</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="light-control">
+            <div class="icon-and-info">
+              <div class="icon"></div>
+              <div>
+                <span class="light-title">Light</span>
+                <span class="room-info"><span id="lightStatus">on</span>&nbsp;&nbsp;&nbsp;</span>
+              </div>
+            </div>
+            <div class="brightness-control">
+              <div id="brightness-level">100%</div>
+              <div class="slider-container" id="brightness-slider">
+                <div class="slider-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <input
+            type="range"
+            id="brightness-slider"
+            min="0"
+            max="100"
+            value="60"
+            style="display: none"
+          />
+
+          <div class="door-lock-control">
+            <div class="icon-and-info">
+              <div class="icon door-icon"></div>
+              <div>
+                <span class="light-title">Door</span>
+                <span class="room-info"><span id="doorLockStatus">Locked</span></span>
+              </div>
+            </div>
+            <div id="state">&nbsp;&nbsp;&nbsp;</div>
+            <button class="toggle-button" id="doorLock">Locked</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Notifications -->
+      <div class="notifications-panel">
+        <h2>Notifications</h2>
+        <div class="notifications-content">
+          <ul id="notifications">
+            <li class="notification-item">
+              Camera detected movement at front door.
+              <span class="notification-time">10:09 AM</span>
+            </li>
+            <li class="notification-item">
+              Temperature adjusted to 24°C.
+              <span class="notification-time">10:12 AM</span>
+            </li>
+            <li class="notification-item">
+              Lights turned off in the living room.
+              <span class="notification-time">10:15 AM</span>
+            </li>
+            <li class="notification-item">
+              Camera detected movement at front door.
+              <span class="notification-time">10:09 AM</span>
+            </li>
+            <li class="notification-item">
+              Temperature adjusted to 24°C.
+              <span class="notification-time">10:12 AM</span>
+            </li>
+            <li class="notification-item">
+              Lights turned off in the living room.
+              <span class="notification-time">10:15 AM</span>
+            </li>
+            <li class="notification-item">
+              Camera detected movement at front door.
+              <span class="notification-time">10:09 AM</span>
+            </li>
+            <li class="notification-item">
+              Temperature adjusted to 24°C.
+              <span class="notification-time">10:12 AM</span>
+            </li>
+            <li class="notification-item">
+              Lights turned off in the living room.
+              <span class="notification-time">10:15 AM</span>
+            </li>
+            <li class="notification-item">
+              Camera detected movement at front door.
+              <span class="notification-time">10:09 AM</span>
+            </li>
+            <li class="notification-item">
+              Temperature adjusted to 24°C.
+              <span class="notification-time">10:12 AM</span>
+            </li>
+            <li class="notification-item">
+              Lights turned off in the living room.
+              <span class="notification-time">10:15 AM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
